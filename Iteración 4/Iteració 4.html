@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulari de Selecció</title>
+  <link rel="stylesheet" href="Iteració 4.css">
+</head>
+<body>
+  <header>
+    <h1>Selecció de Treballadors</h1> 
+  </header>
+  <main>
+    <form action="https://alumnat.cat/form" method="POST" enctype="multipart/form-data" class="form">
+      <fieldset>
+        <legend>Dades Personals</legend>
+
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Escriu el teu nom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="cognoms">Cognoms</label>
+          <input type="text" id="cognoms" name="cognoms" placeholder="Escriu els teus cognoms" required>
+        </div>
+
+        <div class="form-group">
+          <label for="edat">Edat</label>
+          <input type="number" id="edat" name="edat" placeholder="Escriu la teva edat" min="18" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dni">DNI</label>
+          <input type="text" id="dni" name="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]" required>
+        </div>
+
+        <div class="form-group">
+          <label for="color">Color Preferit</label>
+          <input type="color" id="color" name="color">
+        </div>
+
+        <div class="form-group">
+          <label for="mail">Correu Electrònic</label>
+          <input type="email" id="mail" name="mail" placeholder="exemple@correu.com" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Altres Dades</legend>
+
+        <div class="form-group">
+          <label for="estudis">Estudis</label>
+          <select id="estudis" name="estudis" required>
+            <option value="" disabled selected>Selecciona una opció</option>
+            <option value="primari">Primària</option>
+            <option value="secundari">Secundària</option>
+            <option value="grau_mitja">Grau Mitjà</option>
+            <option value="grau_superior">Grau Superior</option>
+            <option value="universitat">Universitat</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Sexe</label>
+          <div>
+            <label><input type="radio" name="sexe" value="home" required> Home</label>
+            <label><input type="radio" name="sexe" value="dona"> Dona</label>
+            <label><input type="radio" name="sexe" value="altres"> Altres</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="explicacio">Explicació</label>
+          <textarea id="explicacio" name="explicacio" rows="4" placeholder="Explica'ns més sobre tu"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Fotografia</label>
+          <input type="file" id="foto" name="foto" accept="image/*" required>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label><input type="checkbox" name="privacitat" required> Accepto la política de privacitat</label>
+      </div>
+
+      <button type="submit">Enviar Formulari</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024 Empresa XYZ</p>
+    <button onclick="window.location.href='/Index Iteració/Index Iteracio.html'">Volver a Página Principal</button>
+  </footer>
+</body>
+</html>
